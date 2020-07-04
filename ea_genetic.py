@@ -62,6 +62,7 @@ class EightQueens:
         return x
 
     def print_set(self, data):
+        data[:] = [number - 1 for number in data]
         print("Queens = {}".format(str(data)))
         timestr = time.strftime("%Y%m%d-%H%M%S")
         file_ptr = open("8queens-output-"+timestr+".txt", "w")
